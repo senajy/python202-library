@@ -10,11 +10,11 @@ Proje üç aşamadan oluşur ve her aşamada yeni özellikler eklenmiştir:
 ## 📂 Proje Yapısı
 
 python202-library/
-├── main.py # Terminal uygulaması (Aşama 1-2)
-├── api.py # FastAPI uygulaması (Aşama 3)
-├── library.json # Kitap verilerini tutan JSON dosyası
-├── requirements.txt # Gerekli kütüphaneler (httpx, fastapi, uvicorn)
-└── README.md # Proje açıklamaları
+├── main.py           # Terminal uygulaması (Aşama 1-2)
+├── api.py            # FastAPI uygulaması (Aşama 3)
+├── library.json      # Kitap verilerini tutan JSON dosyası
+├── requirements.txt  # Gerekli kütüphaneler (httpx, fastapi, uvicorn)
+└── README.md         # Proje açıklamaları
 
 ## 🚀 Çalıştırma
 
