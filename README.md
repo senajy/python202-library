@@ -1,67 +1,59 @@
 # Python202 Library
 
 Bu proje, Global AI Hub Python 202 Bootcamp kapsamında hazırlanmış bir uygulamadır.  
-Proje aşamalar halinde ilerlemektedir ve her aşamada yeni özellikler eklenmiştir.
+Proje üç aşamadan oluşur ve her aşamada yeni özellikler eklenmiştir:
 
----
+1. **Aşama 1:** OOP ile terminal kütüphane uygulaması  
+2. **Aşama 2:** OpenLibrary API entegrasyonu (ISBN ile kitap ekleme)  
+3. **Aşama 3:** FastAPI ile REST API kütüphane servisi  
 
 ## 📂 Proje Yapısı
 
-python202-library/  
-├── main.py              # Projenin ana kod dosyası (Aşama 2 ile API entegrasyonu eklendi)  
-├── library.json         # Kitap verilerini tutan JSON dosyası  
-└── requirements.txt     # Gerekli kütüphaneler (httpx eklendi)
-
----
+python202-library/
+├── main.py # Terminal uygulaması (Aşama 1-2)
+├── api.py # FastAPI uygulaması (Aşama 3)
+├── library.json # Kitap verilerini tutan JSON dosyası
+├── requirements.txt # Gerekli kütüphaneler (httpx, fastapi, uvicorn)
+└── README.md # Proje açıklamaları
 
 ## 🚀 Çalıştırma
 
-Projeyi çalıştırmak için:
-
+### Aşama 1-2 (Terminal Uygulaması)
 ```bash
 python main.py
 
-Uygulama başlatıldığında komut satırında aşağıdaki menü görüntülenecektir:
+Kütüphane Menüsü:
 
-Kütüphane Menüsü
-1) Kitap Ekle (ISBN ile)
-2) Kitap Sil
-3) Kitapları Listele
-4) Kitap Ara
-5) Çıkış
+Kitap Ekle (ISBN ile)
 
-📌 Kitap eklerken yalnızca ISBN girmeniz yeterlidir, başlık ve yazar bilgisi Open Library API’den alınır.
+Kitap Sil
 
+Kitapları Listele
 
----
+Kitap Ara
+
+Çıkış
+
+Aşama 3 (FastAPI Uygulaması)
+uvicorn api:app --reload
+
+Tarayıcıdan:
+👉 http://127.0.0.1:8000/docs
+
+📌 API Endpointleri
+
+GET /books → Kütüphanedeki tüm kitapları listeler
+
+POST /books → ISBN alır ({"isbn": "9780140328721"} gibi), kitabı ekler
+
+DELETE /books/{isbn} → ISBN’e göre kitabı siler
 
 🛠 Gereksinimler
 
-requirements.txt dosyası güncellenmiştir:
-
+requirements.txt içeriği:
 httpx
+fastapi
+uvicorn
 
-Uygulamayı çalıştırmadan önce gerekli kütüphaneyi yüklemek için:
-
+Kurulum:
 pip install -r requirements.txt
-
-
----
-
-📌 Notlar
-
-library.json dosyası, kitap verilerini saklamak için kullanılmaktadır.
-
-Proje ilerledikçe yeni fonksiyonlar ve özellikler eklenecektir.
-
-
-
----
-
-🛠 Gelecek Aşamalar
-
-FastAPI ile web servisi oluşturulacak (Aşama 3)
-
-requirements.txt güncellenecek
-
-Daha detaylı kullanım rehberi hazırlanacak
