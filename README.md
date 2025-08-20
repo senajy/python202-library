@@ -1,13 +1,16 @@
 # Python202 Library
 
-Bu proje, Global AI Hub Python 202 Bootcamp kapsamında hazırlanmış bir uygulamadır.
-Proje aşamalar halinde ilerleyecek ve zamanla yeni özellikler eklenecektir.
+Bu proje, Global AI Hub Python 202 Bootcamp kapsamında hazırlanmış bir uygulamadır.  
+Proje aşamalar halinde ilerlemektedir ve her aşamada yeni özellikler eklenmiştir.
 
 ---
 
 ## 📂 Proje Yapısı
 
-python202-library/ │ ├── main.py              # Projenin ana kod dosyası ├── library.json         # Kitap verilerini tutan JSON dosyası (şu an boş []) └── requirements.txt     # Gerekli kütüphaneler (şu an boş, ileride güncellenecek)
+python202-library/  
+├── main.py              # Projenin ana kod dosyası (Aşama 2 ile API entegrasyonu eklendi)  
+├── library.json         # Kitap verilerini tutan JSON dosyası  
+└── requirements.txt     # Gerekli kütüphaneler (httpx eklendi)
 
 ---
 
@@ -18,14 +21,38 @@ Projeyi çalıştırmak için:
 ```bash
 python main.py
 
+Uygulama başlatıldığında komut satırında aşağıdaki menü görüntülenecektir:
+
+Kütüphane Menüsü
+1) Kitap Ekle (ISBN ile)
+2) Kitap Sil
+3) Kitapları Listele
+4) Kitap Ara
+5) Çıkış
+
+📌 Kitap eklerken yalnızca ISBN girmeniz yeterlidir, başlık ve yazar bilgisi Open Library API’den alınır.
+
+
+---
+
+🛠 Gereksinimler
+
+requirements.txt dosyası güncellenmiştir:
+
+httpx
+
+Uygulamayı çalıştırmadan önce gerekli kütüphaneyi yüklemek için:
+
+pip install -r requirements.txt
+
 
 ---
 
 📌 Notlar
 
-requirements.txt dosyası şu an boş, ilerleyen aşamalarda gerekli kütüphaneler eklenecektir.
+library.json dosyası, kitap verilerini saklamak için kullanılmaktadır.
 
-library.json dosyası şu an sadece [] içeriyor, uygulama geliştikçe veriler buraya yazılacak.
+Proje ilerledikçe yeni fonksiyonlar ve özellikler eklenecektir.
 
 
 
@@ -33,9 +60,8 @@ library.json dosyası şu an sadece [] içeriyor, uygulama geliştikçe veriler 
 
 🛠 Gelecek Aşamalar
 
-Yeni fonksiyonlar ve sınıflar eklenecek
+FastAPI ile web servisi oluşturulacak (Aşama 3)
 
 requirements.txt güncellenecek
 
 Daha detaylı kullanım rehberi hazırlanacak
-
